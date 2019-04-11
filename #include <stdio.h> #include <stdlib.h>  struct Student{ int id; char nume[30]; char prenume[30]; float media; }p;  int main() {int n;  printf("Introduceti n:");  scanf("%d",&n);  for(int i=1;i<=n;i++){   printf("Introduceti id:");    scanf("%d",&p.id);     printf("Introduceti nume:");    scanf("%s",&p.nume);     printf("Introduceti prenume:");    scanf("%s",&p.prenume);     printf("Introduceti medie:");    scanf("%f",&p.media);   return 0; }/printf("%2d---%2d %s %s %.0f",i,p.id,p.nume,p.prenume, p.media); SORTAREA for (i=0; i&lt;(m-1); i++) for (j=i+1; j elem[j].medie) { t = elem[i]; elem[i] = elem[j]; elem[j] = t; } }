@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Student{
+int id;
+char nume[30];
+char prenume[30];
+float media;
+}p;
+
+int main()
+{int n;
+ printf("Introduceti n:");
+ scanf("%d",&n);
+ for(int i=1;i<=n;i++){
+  printf("Introduceti id:");
+   scanf("%d",&p.id);
+    printf("Introduceti nume:");
+   scanf("%s",&p.nume);
+    printf("Introduceti prenume:");
+   scanf("%s",&p.prenume);
+    printf("Introduceti medie:");
+   scanf("%f",&p.media);
+
+ return 0;
+}
+
+// printf("%2d---%2d %s %s %.0f",i,p.id,p.nume,p.prenume, p.media);
+SORTAREA
+for (i=0; i&lt;(m-1); i++)
+for (j=i+1; j elem[j].medie)
+{
+t = elem[i];
+elem[i] = elem[j];
+elem[j] = t;
+}
+}
