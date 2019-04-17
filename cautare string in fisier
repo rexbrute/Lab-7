@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int main()
+{
+    FILE *f;
+    int i=0;
+    char line[250];
+    char almeu[30];
+    char c[30];
+    f= fopen("test1.txt", "r");
+    scanf("%s", almeu);
+    while (fgets(line, sizeof(line), f))
+    {
+
+        i++;
+        if(strstr(line,almeu)){
+
+            printf("\n%s",line);
+            printf("%d",i);}
+
+    }
+    fclose(f);
+    return 0;
+}
