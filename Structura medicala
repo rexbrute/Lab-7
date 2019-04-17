@@ -1,0 +1,80 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Student{
+int id[30];
+char nume[30];
+char prenume[30];
+float media[30];
+}p;
+
+int main()
+{int n;
+int i,s,t,a;
+int k;
+int j;
+int schimb;
+ printf("Introduceti n:");
+ scanf("%d",&n);
+ for(int i=1;i<=n;i++){
+  printf("Introduceti id:");
+   scanf("%d",&p.id[i]);
+       printf("Introduceti nume:");
+   scanf("%s",&p.nume[i]);
+    printf("Introduceti prenume:");
+   scanf("%s",&p.prenume[i]);
+    printf("Introduceti medie:");
+   scanf("%f",&p.media[i]);}
+ for(k=1;k<=n;k++)
+{
+    for(j=k+1;j<=n;j++)
+    {
+        if(p.id[k]>p.id[j])
+        {
+        schimb=p.id[k];
+        p.id[k]=p.id[j];
+        p.id[j]=schimb;
+        s=p.nume[k];
+        p.nume[k]=p.nume[j];
+        p.nume[j]=s;
+         t=p.prenume[k];
+        p.prenume[k]=p.prenume[j];
+        p.prenume[j]=t;
+         a=p.media[k];
+        p.media[k]=p.media[j];
+        p.media[j]=a;
+        }
+    }
+}
+printf("\nDUPA NUMAR ID");
+for(k=1,i=0;k<=n;i++,k++){
+printf("\n#%2d---%2d %.0f",i,p.id[k], p.media[k]);
+}
+
+printf("\n\nDUPA MEDIE");
+ for(k=1;k<=n;k++)
+{
+    for(j=k+1;j<=n;j++)
+    {
+        if(p.media[k]<p.media[j])
+        {
+        schimb=p.id[k];
+        p.id[k]=p.id[j];
+        p.id[j]=schimb;
+        s=p.nume[k];
+        p.nume[k]=p.nume[j];
+        p.nume[j]=s;
+         t=p.prenume[k];
+        p.prenume[k]=p.prenume[j];
+        p.prenume[j]=t;
+         a=p.media[k];
+        p.media[k]=p.media[j];
+        p.media[j]=a;
+        }
+    }
+}
+for(k=1,i=0;k<=n;i++,k++){
+printf("\n#%2d---%2d %.0f",i,p.id[k], p.media[k]);
+}
+ return 0;
+}
