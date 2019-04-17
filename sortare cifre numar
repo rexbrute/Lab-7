@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int main()
+{int k,j,ok,a,t;
+int i,n;
+int vox[100];
+    scanf("%d",&a);
+    for(i=0;i<10;i++){
+        vox[i]=a%10;
+        a=a/10;
+        if(vox[i]==1)ok=1;
+        else ok=0;
+        if(a==0){n=i;break;}
+    }
+if(ok==1) for(k=0;k<n;k++)
+{
+    for(j=k+1;j<n;j++)
+    {
+        if(vox[k]<vox[j])
+        {
+        t=vox[k];
+        vox[k]=vox[j];
+        vox[j]=t;}}}
+        else for(k=0;k<n;k++)
+{
+    for(j=k+1;j<n;j++)
+    {
+        if(vox[k]>vox[j])
+        {
+        t=vox[k];
+        vox[k]=vox[j];
+        vox[j]=t;}}}
+for(i=0;i<=n;i++){printf("%d", vox[i]);}
+
+    return 0;
+}
